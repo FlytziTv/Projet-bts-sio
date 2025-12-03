@@ -8,6 +8,9 @@
 header {
   background-color: #e9e9e9;
   padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 .header-web {
@@ -79,63 +82,80 @@ footer {
 .link-footer:hover {
   font-weight: 700;
 }
-.table-sudoku{ 
-  display :flex;
+
+main {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
   align-items: center;
   justify-content: center;
 }
-.block-générale{
-  width: min(500px);
-  aspect-ratio: 1 / 1;
-  background-color: bisque;
-  display :grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 6px;
-  padding: 12px;
 
-  
-}
-.block{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3px;
-  background-color: brown;
-  padding: 4px;
-}
-.cell{
-  width: 100%;
-aspect-ratio: 1 /1;
-display: flex;
-background-color: green;
-justify-content: center;
-align-items: center;
-line-height: 1;
-overflow: hidden;
-position: relative;
-}
-
-main{
+.sudoku-main {
   display: flex;
   flex-direction: row;
   gap: 100px;
-  width: 100%;
-  align-items: center;
+  align-items: start;
   justify-content: center;
-  
 }
 
-.Paramètres{
-  background-color: gray;
+.table-sudoku {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.block-générale {
+  width: min(500px);
+  aspect-ratio: 1 / 1;
+  background-color: #ffe4f0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  padding: 12px;
+  border: 4px solid #ff99cc;
+  border-radius: 8px;
+}
+
+.block {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  background-color: #ffb3d9;
+  padding: 4px;
+  border: 2px solid #ff80bf;
+  border-radius: 4px;
+}
+
+.cell {
+  width: 100%;
+  aspect-ratio: 1 /1;
+  display: flex;
+  background-color: #fff0f7;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #ffb3d9;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+.Paramètres {
+  background-color: #ffe4f0;
+  border: 4px solid #ff99cc;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 4px;
-  padding: 8px;
-  
-
+  padding: 16px 32px;
+  height: fit-content;
 }
 
-.Paramètres h2{
+.Paramètres h2 {
   font-size: 24px;
 }
