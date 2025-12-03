@@ -79,3 +79,63 @@ footer {
 .link-footer:hover {
   font-weight: 700;
 }
+.table-sudoku{ 
+  display :flex;
+  align-items: center;
+  justify-content: center;
+}
+.block-générale{
+  width: min(500px);
+  aspect-ratio: 1 / 1;
+  background-color: bisque;
+  display :grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  padding: 12px;
+
+  
+}
+.block{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  background-color: brown;
+  padding: 4px;
+}
+.cell{
+  width: 100%;
+aspect-ratio: 1 /1;
+display: flex;
+background-color: green;
+justify-content: center;
+align-items: center;
+line-height: 1;
+overflow: hidden;
+position: relative;
+}
+
+main{
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.Paramètres{
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
+  
+
+}
+
+.Paramètres h2{
+  font-size: 24px;
+}
