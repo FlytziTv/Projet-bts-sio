@@ -31,10 +31,8 @@ Remplissez la grille de Sudoku directement dans votre navigateur. Utilisez les b
 ## Auteur
 
 - Encadrant : Armand.L (toredux)
-- Chaina (Chaina92i)
-- Vadym (provadnike)
-- Paul-Yann.B (_vortox_)
-- Alexis (FlytziTv)
+- Chaina [(Chaina92i)](https://github.com/chaina92i)
+- Alexis [(FlytziTv)](https://github.com/FlytziTv)
 
 ## Licence
 
