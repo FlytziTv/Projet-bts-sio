@@ -123,46 +123,67 @@
           </div>
         </section>
         <section class="Paramètres">
-          <h2>Paramètres</h2>
-          <div>
-            <h3>Difficulté</h3>
+          <div class="Paramètres-general">
+            <h2>Paramètres</h2>
+            <div class="timer">
+              <h3>Timeur :</h3>
+              <p>Temps de jeu: <span>00:00</span>min</p>
+            </div>
 
-            <form>
-              <div>
-                <input
-                  type="radio"
-                  id="contactChoice1"
-                  name="Facile"
-                  value="facile"
-                />
-                <label for="contactChoice1">Facile</label>
+            <div class="difficultées">
+              <h3>Difficulté :</h3>
+              <form>
+                <div>
+                  <input
+                    type="radio"
+                    id="contactChoice1"
+                    name="difficulty"
+                    value="facile"
+                  />
+                  <label for="contactChoice1">Facile</label>
 
-                <input
-                  type="radio"
-                  id="contactChoice2"
-                  name="Moyenne"
-                  value="moyenne"
-                />
-                <label for="contactChoice2">Moyenne</label>
+                  <input
+                    type="radio"
+                    id="contactChoice2"
+                    name="difficulty"
+                    value="moyenne"
+                  />
+                  <label for="contactChoice2">Moyenne</label>
 
-                <input
-                  type="radio"
-                  id="contactChoice3"
-                  name="Difficile"
-                  value="difficile"
-                />
-                <label for="contactChoice3">Difficile</label>
+                  <input
+                    type="radio"
+                    id="contactChoice3"
+                    name="difficulty"
+                    value="difficile"
+                  />
+                  <label for="contactChoice3">Difficile</label>
 
-                <input
-                  type="radio"
-                  id="contactChoice3"
-                  name="Experte"
-                  value="experte"
-                />
-                <label for="contactChoice3">Experte</label>
+                  <input
+                    type="radio"
+                    id="contactChoice4"
+                    name="difficulty"
+                    value="experte"
+                  />
+                  <label for="contactChoice4">Experte</label>
+                </div>
+              </form>
+            </div>
+
+            <div class="actions">
+              <h3>Actions :</h3>
+              <div class="actions-btn">
+                <button class="button" id="btn-new-game">
+                  Nouvelle Partie
+                </button>
+                <button class="button" id="btn-hint">Indice</button>
+                <button class="button" id="btn-solve">Résoudre</button>
+                <button class="button" id="btn-check">Vérifier</button>
+                <button class="button" id="btn-import">Importer</button>
               </div>
-            </form>
+            </div>
           </div>
+
+          <button class="btn-reset">Réinitialiser</button>
         </section>
       </section>
     </main>

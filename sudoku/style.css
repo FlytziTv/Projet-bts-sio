@@ -139,8 +139,25 @@ main {
   overflow: hidden;
   position: relative;
   border: 1px solid #ffb3d9;
-  border-radius: 2px;
+  border-radius: 6px;
   transition: all 0.2s ease;
+}
+
+.cell:hover {
+  background-color: #ffd5ea;
+  cursor: pointer;
+}
+
+.error-cell {
+  border: 2px solid #ff0000;
+  background-color: #ff000042;
+  border-radius: 6px;
+}
+
+.hint-cell {
+  border: 2px solid #0084ff;
+  background-color: #0084ff42;
+  border-radius: 6px;
 }
 
 .Paramètres {
@@ -148,14 +165,119 @@ main {
   border: 4px solid #ff99cc;
   border-radius: 8px;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   flex-direction: column;
   gap: 4px;
   padding: 16px 32px;
-  height: fit-content;
+  height: -webkit-fill-available;
 }
 
-.Paramètres h2 {
+.Paramètres-general h2 {
   font-size: 24px;
+}
+
+.Paramètres-general {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.timer P {
+  font-weight: 500;
+}
+.timer p span {
+  font-size: 16px;
+}
+
+.difficultées {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Masquer les inputs radio par défaut */
+.difficultées input[type="radio"] {
+  display: none;
+}
+
+/* Styliser les labels comme des boutons */
+.difficultées label {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 2px solid #ff99cc;
+  border-radius: 6px;
+  background-color: #fff0f7;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+/* Effet hover */
+.difficultées label:hover {
+  background-color: #ffb3d9;
+  border-color: #ff80bf;
+}
+
+/* Style quand le radio est sélectionné */
+.difficultées input[type="radio"]:checked + label {
+  background-color: #ff99cc;
+  border-color: #ff80bf;
+  color: white;
+  font-weight: 500;
+}
+
+/* Organiser les boutons en ligne */
+.difficultées form > div {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.actions-btn {
+  display: flex;
+  gap: 6px;
+}
+
+.button {
+  padding: 6px 12px;
+  border: 2px solid #ff99cc;
+  border-radius: 6px;
+  background-color: #fff0f7;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.button:hover {
+  background-color: #ff99cc;
+  border-color: #ff80bf;
+  color: white;
+  font-weight: 500;
+}
+
+.btn-reset {
+  width: 100%;
+  border: 1px solid #ffb3d9;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background-color: #ffb3d9;
 }
