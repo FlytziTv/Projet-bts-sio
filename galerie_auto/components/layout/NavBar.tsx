@@ -4,7 +4,7 @@ import { NavItem, navItems } from "@/data/nav";
 
 export default function NavBar() {
   return (
-    <nav className="bg-black/15 text-black w-full p-2 rounded-lg grid grid-cols-3 items-center">
+    <nav className="fixed top-5 w-350 bg-black/15 text-black p-2 rounded-lg grid grid-cols-3 items-center backdrop-blur-sm z-100">
       <div className="flex items-center justify-start gap-2 pl-1">
         <Logo size={30} />
       </div>
