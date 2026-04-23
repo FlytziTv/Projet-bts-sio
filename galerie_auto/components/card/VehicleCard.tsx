@@ -1,6 +1,7 @@
+import { Vehicle } from "@/types/vehicle";
 import Image from "next/image";
 
-export default function VehicleCard() {
+export default function VehicleCard({ vehicle }: { vehicle: Vehicle }) {
   return (
     <div className="bg-[#EEEFF2] p-5 flex flex-col gap-2.5 rounded-lg shadow-md w-full">
       <div className="flex items-center gap-2.5">
@@ -8,14 +9,14 @@ export default function VehicleCard() {
         <CardInfos text="2026" />
       </div>
 
-      <CardImage />
+      <CardImage images={vehicle.images} name={vehicle.name} />
 
       <CardStats
-        name="Porsche 911 GT3 RS"
-        price="250 000,00"
-        pulseOverboost="450 ch"
-        acceleration="3.2 s"
-        autonomy="592 km"
+        name={vehicle.name}
+        price={vehicle.price.toLocaleString("fr-FR") + " €"}
+        pulseOverboost={vehicle.stats.powerHP.toString() + " ch"}
+        acceleration={vehicle.stats.acceleration0to100.toString() + " s"}
+        autonomy={vehicle.stats.fuelConsumption?.toString() + " L/100km"}
       />
 
       <ButtonActions />
@@ -31,13 +32,13 @@ function CardInfos({ text }: { text: string }) {
   );
 }
 
-function CardImage() {
+function CardImage({ images, name }: { images: string; name: string }) {
   return (
     <div className="w-full h-43.5 px-13.5">
       <div className="relative w-full h-full">
         <Image
-          src="/vehicle/911/911 GT3 RS.png"
-          alt="Porsche 911 GT3 RS"
+          src={images || "/vehicle/default.png"}
+          alt={name}
           fill
           className="object-contain"
         />
@@ -63,7 +64,7 @@ function CardStats({
     <div className="flex flex-col items-start gap-2.5">
       <div className="flex flex-col">
         <h1 className="text-xl font-semibold text-black">{name}</h1>
-        <p className="text-sm text-[#535457]">Des {price} €</p>
+        <p className="text-sm text-[#535457]">Des {price}</p>
       </div>
 
       <TextStats

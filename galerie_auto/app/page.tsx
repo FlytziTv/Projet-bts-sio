@@ -1,6 +1,7 @@
 import VehicleCard from "@/components/card/VehicleCard";
 import NavBar from "@/components/layout/NavBar";
 import ViewCar from "@/components/layout/ViewCar";
+import { vehiclesData } from "@/data/vehicles";
 
 export default function Home() {
   return (
@@ -17,10 +18,9 @@ export default function Home() {
           </p>
         </div>
         <div className="grid grid-cols-3 gap-5.5">
-          <VehicleCard />
-          <VehicleCard />
-          <VehicleCard />
-          <VehicleCard />
+          {vehiclesData.map((vehicle) => (
+            <VehicleCard key={vehicle.id} vehicle={vehicle} />
+          ))}
         </div>
       </div>
     </div>
