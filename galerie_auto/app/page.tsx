@@ -1,10 +1,13 @@
 import VehicleCard from "@/components/card/VehicleCard";
 import NavBar from "@/components/layout/NavBar";
+import ViewCar from "@/components/layout/ViewCar";
 
 export default function Home() {
   return (
-    <div className=" min-h-screen w-350 mx-auto flex flex-col py-22">
+    <div className=" min-h-screen w-350 mx-auto flex flex-col pb-5">
       <NavBar />
+
+      <ViewCar />
 
       <div className="flex-1 flex flex-col gap-5">
         <div className="flex flex-col gap-0">
