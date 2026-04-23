@@ -30,10 +30,10 @@ export const vehiclesData: Vehicle[] = [
       fuelConsumption: 13.0,
     },
     dimensions: {
-      lengthMm: 4418, // Donnée issue de ton texte
-      widthMm: 1822, // Donnée issue de ton texte
-      heightMm: 1252, // Donnée issue de ton texte
-      wheelbaseMm: 2482, // Donnée issue de ton texte
+      lengthMm: 4418, 
+      widthMm: 1822, 
+      heightMm: 1252, 
+      wheelbaseMm: 2482, 
       trunkCapacityL: 120, // 125L à l'avant, 120L à l'arrière
     },
     features: [
@@ -76,10 +76,10 @@ export const vehiclesData: Vehicle[] = [
       fuelConsumption: 13.2,
     },
     dimensions: {
-      lengthMm: 4456, // Donnée issue de ton texte
-      widthMm: 1822, // Donnée issue de ton texte
-      heightMm: 1267, // Donnée issue de ton texte
-      wheelbaseMm: 2482, // Donnée issue de ton texte
+      lengthMm: 4456, 
+      widthMm: 1822, 
+      heightMm: 1267, 
+      wheelbaseMm: 2482, 
       trunkCapacityL: 136, // 125L à l'avant, 136L à l'arrière
     },
     features: [
@@ -901,10 +901,10 @@ export const vehiclesData: Vehicle[] = [
       batteryCapacityKWh: 100,
     },
     dimensions: {
-      lengthMm: 4985, // Donnée issue de ton texte
-      widthMm: 1980, // Donnée issue de ton texte
-      heightMm: 1674, // Donnée issue de ton texte
-      wheelbaseMm: 3023, // Donnée issue de ton texte
+      lengthMm: 4985, 
+      widthMm: 1980, 
+      heightMm: 1674, 
+      wheelbaseMm: 3023, 
       trunkCapacityL: 650,
     },
     features: [
@@ -947,10 +947,10 @@ export const vehiclesData: Vehicle[] = [
       fuelConsumption: 10.8,
     },
     dimensions: {
-      lengthMm: 4930, // Donnée issue de ton texte
-      widthMm: 1983, // Donnée issue de ton texte
-      heightMm: 1679, // Donnée issue de ton texte
-      wheelbaseMm: 2895, // Donnée issue de ton texte
+      lengthMm: 4930, 
+      widthMm: 1983, 
+      heightMm: 1679, 
+      wheelbaseMm: 2895, 
       trunkCapacityL: 772,
     },
     features: [
@@ -992,10 +992,10 @@ export const vehiclesData: Vehicle[] = [
       fuelConsumption: 11.0,
     },
     dimensions: {
-      lengthMm: 4930, // Donnée issue de ton texte
+      lengthMm: 4930, 
       widthMm: 1983,
-      heightMm: 1659, // Donnée issue de ton texte (plus bas que le SUV)
-      wheelbaseMm: 2895, // Donnée issue de ton texte
+      heightMm: 1659,  (plus bas que le SUV)
+      wheelbaseMm: 2895, 
       trunkCapacityL: 592,
     },
     features: [
