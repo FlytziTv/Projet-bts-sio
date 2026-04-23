@@ -4,11 +4,12 @@ import { NavItem, navItems } from "@/data/nav";
 
 export default function NavBar() {
   return (
-    <nav className="fixed top-5 w-350 bg-black/15 text-black p-2 rounded-lg grid grid-cols-3 items-center backdrop-blur-sm z-100">
+    <nav className="fixed top-5 left-4 right-4 md:left-auto md:right-auto md:w-full md:max-w-[1368px] bg-black/15 text-black p-2 rounded-lg flex items-center justify-between backdrop-blur-sm z-50">
       <div className="flex items-center justify-start gap-2 pl-1">
         <Logo size={30} />
       </div>
-      <div className="flex items-center justify-center gap-2">
+
+      <div className="hidden md:flex items-center justify-center gap-2">
         {navItems.map((item) => (
           <ItemNavBar key={item.href} name={item.name} href={item.href} />
         ))}

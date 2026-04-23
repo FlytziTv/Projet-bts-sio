@@ -3,21 +3,27 @@ import Image from "next/image";
 
 export default function VehicleCard({ vehicle }: { vehicle: Vehicle }) {
   return (
-    <div className="bg-[#EEEFF2] p-5 flex flex-col gap-2.5 rounded-lg shadow-md w-full">
-      <div className="flex items-center gap-2.5">
-        <CardInfos text="Électrique" />
-        <CardInfos text="2026" />
+    <div className="bg-[#EEEFF2] p-5 flex flex-col gap-4 rounded-lg shadow-md w-full h-full justify-between">
+      <div className="flex flex-col gap-2.5">
+        <div className="flex flex-wrap items-center gap-2.5">
+          <CardInfos text={vehicle.energy} />
+          <CardInfos text={vehicle.year.toString()} />
+        </div>
+
+        <CardImage images={vehicle.images} name={vehicle.name} />
+
+        <CardStats
+          name={vehicle.name}
+          price={vehicle.price.toLocaleString("fr-FR") + " €"}
+          pulseOverboost={vehicle.stats.powerHP.toString() + " ch"}
+          acceleration={vehicle.stats.acceleration0to100.toString() + " s"}
+          autonomy={
+            vehicle.stats.autonomyKm
+              ? vehicle.stats.autonomyKm.toString() + " km"
+              : vehicle.stats.fuelConsumption?.toString() + " L/100km"
+          }
+        />
       </div>
-
-      <CardImage images={vehicle.images} name={vehicle.name} />
-
-      <CardStats
-        name={vehicle.name}
-        price={vehicle.price.toLocaleString("fr-FR") + " €"}
-        pulseOverboost={vehicle.stats.powerHP.toString() + " ch"}
-        acceleration={vehicle.stats.acceleration0to100.toString() + " s"}
-        autonomy={vehicle.stats.fuelConsumption?.toString() + " L/100km"}
-      />
 
       <ButtonActions />
     </div>
@@ -91,11 +97,11 @@ function TextStats({ value, title }: { value: string; title: string }) {
 
 function ButtonActions() {
   return (
-    <div className="w-full grid grid-cols-2 items-center gap-2.5">
-      <button className="py-2.5 bg-black border border-black text-white text-center rounded-md text-sm font-normal hover:bg-black/80 transition-colors duration-500">
+    <div className="w-full flex flex-col sm:grid sm:grid-cols-2 items-center gap-2.5 mt-2">
+      <button className="w-full py-2.5 bg-black border border-black text-white text-center rounded-md text-sm font-normal hover:bg-black/80 transition-colors duration-300">
         Voir les détails
       </button>
-      <button className="py-2.5 bg-transparent border border-black text-black text-center rounded-md text-sm font-normal hover:bg-black/10 transition-colors duration-500">
+      <button className="w-full py-2.5 bg-transparent border border-black text-black text-center rounded-md text-sm font-normal hover:bg-black/10 transition-colors duration-300">
         Acheter
       </button>
     </div>

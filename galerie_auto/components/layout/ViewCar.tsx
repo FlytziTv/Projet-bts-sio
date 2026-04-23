@@ -21,20 +21,11 @@ export default function ViewCar() {
 
   return (
     <div className="min-h-screen w-full flex items-center justify-center relative">
-      {/* Image dynamique */}
-      <div className="absolute inset-0 w-full h-full ">
-        <Image
-          src={activeCar.images}
-          alt={activeCar.name}
-          fill
-          className="object-contain "
-          priority
-        />
-      </div>
-
-      <div className="absolute top-1/6 right-5 flex flex-col items-end justify-end">
-        <h1 className="text-[60px] font-bold text-black">{activeCar.name}</h1>
-        <p className="text-xl text-black/80">
+      <div className="absolute top-24 md:top-1/4 md:right-5 flex flex-col items-center md:items-end justify-center z-10 w-full px-4 md:px-0">
+        <h1 className="text-4xl sm:text-5xl md:text-[60px] font-bold text-black text-center md:text-right leading-tight">
+          {activeCar.name}
+        </h1>
+        <p className="text-lg md:text-xl text-black/80 mt-2">
           {new Intl.NumberFormat("fr-FR", {
             style: "currency",
             currency: "EUR",
@@ -42,7 +33,18 @@ export default function ViewCar() {
         </p>
       </div>
 
-      <div className="absolute bottom-5 flex flex-row gap-2 items-center justify-center z-10">
+      {/* Image dynamique */}
+      <div className="relative w-full max-w-250 h-[40vh] md:h-[60vh] mt-20 md:mt-0 z-0">
+        <Image
+          src={activeCar.images}
+          alt={activeCar.name}
+          fill
+          className="object-contain drop-shadow-2xl"
+          priority
+        />
+      </div>
+
+      <div className="absolute bottom-5 flex flex-wrap gap-2 items-center justify-center z-10 w-full px-4">
         {featuredCars.map((_, index) => (
           <ButtonActions
             key={index}
