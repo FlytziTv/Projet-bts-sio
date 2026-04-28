@@ -78,11 +78,6 @@ npm run start   # démarre l'app en production
 npm run lint    # vérification ESLint
 ```
 
-## 👨‍💻 Auteur
-
-Projet réalisé par **[Ton Nom]**  
-BTS SIO SLAM — [Nom de l’établissement]
-
 ## 📌 Améliorations possibles
 
 - Authentification utilisateur
